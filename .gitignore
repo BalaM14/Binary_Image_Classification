@@ -165,3 +165,7 @@ cython_debug/
 .vscode
 *.jpg
 *.zip
+artifacts/prepare_callbacks/checkpoint_dir/model.h5
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2024-06-21-13-02-58/train/events.out.tfevents.1718955181.BALA_JO.6416.0.v2
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2024-06-21-13-02-58/validation/events.out.tfevents.1718956623.BALA_JO.6416.1.v2
+artifacts/training/model.h5
