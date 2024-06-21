@@ -1,1 +1,1 @@
-from deepClassifier.config.configuration import *
+from deepClassifier.config.configuration import ConfigurationManager
