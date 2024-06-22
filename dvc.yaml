@@ -9,9 +9,9 @@ stages:
 
     
   prepare_base_model:
-    cmd: python src\deepClassifier\pipeline\stage02_prepare_base_model.py
+    cmd: python src/deepClassifier/pipeline/stage02_prepare_base_model.py
     deps:
-      - src\deepClassifier\pipeline\stage02_prepare_base_model.py
+      - src/deepClassifier/pipeline/stage02_prepare_base_model.py
       - configs/config.yaml
     params:
       - IMAGE_SIZE
@@ -20,16 +20,16 @@ stages:
       - WEIGHTS
       - LEARNING_RATE
     outs:
-      - artifacts\prepare_base_model
+      - artifacts/prepare_base_model
 
   training:
-    cmd: python src\deepClassifier\pipeline\stage03_training.py
+    cmd: python src/deepClassifier/pipeline/stage03_training.py
     deps:
-      - src\deepClassifier\pipeline\stage03_training.py
-      - src\deepClassifier\components\prepare_callback.py
+      - src/deepClassifier/pipeline/stage03_training.py
+      - src/deepClassifier/components/prepare_callback.py
       - configs/config.yaml
       - artifacts/data_ingestion/PetImages
-      - artifacts\prepare_base_model
+      - artifacts/prepare_base_model
     params:
       - IMAGE_SIZE
       - EPOCHS
@@ -37,3 +37,17 @@ stages:
       - AUGMENTATION
     outs:
       - artifacts/training/model.h5
+
+  evaluation:
+    cmd: python src/deepClassifier/pipeline/stage04_evaluation.py
+    deps:
+      - src/deepClassifier/pipeline/stage04_evaluation.py
+      - configs/config.yaml
+      - artifacts/data_ingestion/PetImages
+      - artifacts/training/model.h5
+    params:
+      - IMAGE_SIZE
+      - BATCH_SIZE
+    metrics:
+      - scores.json:
+          cache: false
