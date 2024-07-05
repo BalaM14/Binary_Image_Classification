@@ -23,6 +23,6 @@ if uploaded_file is not None:
     argmax_index = np.argmax(result, axis=1) # [0, 0]
     st.header('PREDICTED OUTPUT', divider='rainbow')
     if argmax_index[0] == 0:
-        st.image(image, caption=":blue[CAT]")
+        st.image(image, caption="CAT")
     else:
-        st.image(image, caption=':red[DOG]')
+        st.image(image, caption='DOG',)
