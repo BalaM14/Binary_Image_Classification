@@ -4,8 +4,11 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 
-""""
-# deep classifier project
+"""
+# Created By : Bala Murugan
+# LinkedIn : https://www.linkedin.com/in/balamurugan14/
+
+# Binary Image Classification
 """
 model = tf.keras.models.load_model("model.h5")
 uploaded_file = st.file_uploader("Choose a file")
