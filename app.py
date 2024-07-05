@@ -24,7 +24,7 @@ if uploaded_file is not None:
     st.header('PREDICTED OUTPUT', divider='rainbow')
     if argmax_index[0] == 0:
         st.image(image)
-        st.header(':blue[CAT]')
+        st.header('\t :blue[CAT]')
     else:
         st.image(image)
-        st.header('DOG')
+        st.header('\t :red[DOG]')
