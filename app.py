@@ -5,8 +5,8 @@ import numpy as np
 from PIL import Image
 
 """
-# Created By : Bala Murugan
-# LinkedIn : https://www.linkedin.com/in/balamurugan14/
+### Created By : Bala Murugan
+#### LinkedIn : https://www.linkedin.com/in/balamurugan14/
 
 # Binary Image Classification
 """
