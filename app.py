@@ -6,8 +6,8 @@ from PIL import Image
 import zipfile
 
 """
-### Created By : Bala Murugan   \t\t LinkedIn : https://www.linkedin.com/in/balamurugan14/
-
+### Created By : Bala Murugan
+#### LinkedIn : https://www.linkedin.com/in/balamurugan14/
 # Binary Image Classification
 """
 model = tf.keras.models.load_model("model.h5")
