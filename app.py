@@ -14,7 +14,7 @@ import zipfile
 model = tf.keras.models.load_model("model.h5")
 file_uploaded = st.file_uploader("Upload", type=["png","jpg","jpeg"], accept_multiple_files=True)
 st.header('PREDICTED OUTPUT', divider='rainbow')
-row_size=3
+row_size=4
 grid = st.columns(row_size)
 col = 0
 for file in file_uploaded:
